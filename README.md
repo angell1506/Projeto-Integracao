@@ -18,3 +18,5 @@ Elementos essenciais para o site:
 - Simplicidade
 
 Nossa escolha foi baseada no critério de proximidade, já que a panificadora é mais conhecida entre os moradores da região. Por não ser um estabelecimento amplamente popular, apenas quem reside nas proximidades costuma conhecê-la bem.
+
+Data 21/10/2025: Foi implementado o código do index.html, fazendo o corpo do site e as coisas básicas para termos uma direção, e a criação da logo do estabelecimento.
