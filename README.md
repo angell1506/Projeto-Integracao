@@ -17,5 +17,4 @@ Elementos essenciais para o site:
 - Informações como horário das fornadas 
 - Simplicidade
 
-A nossa escolha foi baseada pelo critérios de quem mora perto dessa panificadora, pois ela não é popular para as pessoas que não conhecem o local com propriedade,
-somente quem mora perto dessa local conhece essa panificadora;
+Nossa escolha foi baseada no critério de proximidade, já que a panificadora é mais conhecida entre os moradores da região. Por não ser um estabelecimento amplamente popular, apenas quem reside nas proximidades costuma conhecê-la bem.
