@@ -20,3 +20,5 @@ Elementos essenciais para o site:
 Nossa escolha foi baseada no critério de proximidade, já que a panificadora é mais conhecida entre os moradores da região. Por não ser um estabelecimento amplamente popular, apenas quem reside nas proximidades costuma conhecê-la bem.
 
 Data 21/10/2025: Foi implementado o código do index.html, fazendo o corpo do site e as coisas básicas para termos uma direção, e a criação da logo do estabelecimento.
+
+Data: 27/10/2025: Foi implementado o codigo do SobreNos.html aonde começo o corpo do texto que descreve a fundação da panificadora.
