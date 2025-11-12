@@ -24,3 +24,5 @@ Data 21/10/2025: Foi implementado o código do index.html, fazendo o corpo do si
 Data: 27/10/2025: Foi implementado o codigo do SobreNos.html aonde começo o corpo do texto que descreve a fundação da panificadora.
 
 Data 04/11/2025: Inicializamos o style da página principal, adicionando espaçamento, cores, e a proporção da tela.
+
+Data 12/11/2025: Melhoramos o código, arrumando cores, retirando redundâncias dos códigos, verificamos se havia mais erros usando o w3school e o chatgpt.com, e chegamos em um bom modelo do nosso site.
