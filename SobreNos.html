@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>A Saborosa – Início</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Saborosa – Sobre Nós</title>
+
   <style>
-    /* Estilos gerais */
+    /* ===== CORES PADRÃO ===== */
+    :root {
+      --cor-fundo: goldenrod;
+      --cor-fundo-claro: #fff;
+      --cor-texto: #333;
+      --cor-destaque: #d17f00;
+      --cor-escuro: #333;
+    }
+
+    /* ===== ESTILOS GERAIS ===== */
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff8e1;
-      color: #333;
+      background-color: var(--cor-fundo);
+      color: var(--cor-texto);
+      line-height: 1.6;
     }
 
-    /* Cabeçalho */
+    /* ===== CABEÇALHO ===== */
     header {
-      background-color: #f4b41a;
-      color: #fff;
+      background-color: var(--cor-fundo-claro);
       text-align: center;
-      padding: 20px 0;
+      padding: 20px 0 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.3rem;
+      color: var(--cor-destaque);
     }
 
     header p {
       margin: 5px 0 15px;
-      font-size: 1.2em;
+      font-size: 1.1rem;
+      color: var(--cor-escuro);
     }
 
-    /* Navegação */
+    /* ===== NAVEGAÇÃO ===== */
     nav ul {
       list-style: none;
       padding: 0;
@@ -44,40 +56,78 @@
     }
 
     nav a {
-      color: #fff;
+      color: var(--cor-destaque);
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--cor-escuro);
     }
 
-    /* Conteúdo principal */
+    /* ===== CONTEÚDO PRINCIPAL ===== */
     main {
-      padding: 30px;
+      background-color: var(--cor-fundo-claro);
       max-width: 900px;
-      margin: auto;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      text-align: center;
     }
 
     main h2 {
-      color: #d17f00;
+      color: var(--cor-destaque);
+      margin-top: 0;
     }
 
-    /* Rodapé */
+    main p {
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    main img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== GALERIA ===== */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ===== RODAPÉ ===== */
     footer {
-      background-color: #333;
-      color: #fff;
+      background-color: var(--cor-fundo-claro);
+      color: var(--cor-escuro);
       text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
+      padding: 20px;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
     }
 
     footer a {
-      color: #f4b41a;
+      color: var(--cor-destaque);
       text-decoration: none;
     }
 
@@ -87,7 +137,34 @@
 
     footer address {
       font-style: normal;
+      line-height: 1.8;
       margin-bottom: 10px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 700px) {
+      main {
+        padding: 20px;
+        margin: 20px;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .galeria {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -105,26 +182,39 @@
   </header>
 
   <main>
-    <h2>Fundação da Nossa Panificadora</h2>
-    <h2>Fundação da Nossa Panificadora</h2>
-  <img src="imagens/panificadora.png" alt="Fachada da panificadora A Saborosa" style="width:100%; max-width:600px; display:block; margin:20px auto; border-radius:10px;">
-  <p>
-    A <strong>A Saborosa</strong> nasceu em 2005, no coração de Taguatinga, com o sonho
-    de trazer pães quentinhos e receitas artesanais para a comunidade local.
-  </p>
-  <p>
-    Hoje oferecemos uma grande variedade de pães, bolos, doces e salgados — tudo
-    feito com ingredientes frescos e aquele toque caseiro que você só encontra aqui.
-  </p>
+    <h2>Sobre Nós</h2>
+    <img src="imagens/panificadora.png" alt="Fachada da panificadora A Saborosa">
+
+    <p>
+      A <strong>A Saborosa</strong> nasceu em 2005, no coração de Taguatinga, com o sonho de oferecer pães quentinhos e receitas artesanais feitas com amor.
+    </p>
+    <p>
+      Com o passar dos anos, conquistamos o carinho da comunidade oferecendo qualidade, atendimento acolhedor e o sabor de uma verdadeira padaria de bairro.
+    </p>
+    <p>
+      Hoje contamos com uma equipe dedicada e uma linha completa de pães, bolos, doces e salgados — tudo preparado com ingredientes frescos e selecionados.
+    </p>
+
+    <h3>Nosso Espaço</h3>
+    <p>Confira um pouco do nosso ambiente acolhedor e das delícias que preparamos todos os dias:</p>
+
+    <!-- ===== GALERIA DE IMAGENS ===== -->
+    <div class="galeria">
+      <img src="imagens/interior1.png" alt="Interior da panificadora">
+      <img src="imagens/vitrine1.png" alt="Vitrine dos produtos">
+      <img src="imagens/forno1.png" alt="Pães saindo do forno">
+      <!-- Você pode adicionar mais imagens aqui -->
+    </div>
   </main>
 
   <footer>
     <address>
-      <p>📍 Localização: <a href="https://www.google.com/maps/place/A+Saborosa+Panificadora/@-15.8376608,-48.0590404">Avenida Samdu Sul</a></p>
-      <p>📧 Email: <a href="mailto:contato@asaborosa.com.br">contato@asaborosa.com.br</a></p>
-      <p>📞 Telefone: <a href="tel:+5561981619799">+55 (61) 98161-9799</a> | <a href="tel:+556130366618">+55 (61) 3036-6618</a></p>
+      <p><strong>📍 Localização:</strong> <a href="https://www.google.com/maps/place/A+Saborosa+Panificadora" target="_blank">Avenida Samdu Sul, Taguatinga, DF</a></p>
+      <p><strong>📧 E-mail:</strong> <a href="mailto:contato@asaborosa.com.br">contato@asaborosa.com.br</a></p>
+      <p><strong>📞 Telefones:</strong> <a href="tel:+5561981619799">+55 (61) 98161-9799</a> | <a href="tel:+556130366618">+55 (61) 3036-6618</a></p>
     </address>
-    <p>&copy; 2025 A Saborosa (Pães e Delícias) - Todos os direitos reservados</p>
+
+    <small>&copy; 2025 A Saborosa (Pães e Delícias) — Todos os direitos reservados</small><br>
     <a href="#topo">⬆ Voltar ao topo</a>
   </footer>
 </body>
