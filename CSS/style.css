@@ -1,192 +1,260 @@
-/* =========================================================
-   CORES PADRÃO
-========================================================= */
+/* ==========================================================
+   A SABOROSA — ESTILO GERAL PARA TODO O SITE
+   ========================================================== */
+
+/* ===== VARIÁVEIS DE CORES ===== */
 :root {
   --cor-fundo: goldenrod;
-  --cor-fundo-claro: white;
+  --cor-clara: #fff;
   --cor-texto: #222;
   --cor-destaque: #b8860b;
   --cor-hover: #8b6508;
 }
 
-/* =========================================================
-   ESTILO GLOBAL (válido para todas as páginas)
-========================================================= */
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ESTILO GERAL ===== */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
 }
 
+/* ==========================================================
+   CABEÇALHO (Usado em TODAS as páginas)
+   ========================================================== */
 header {
-  background-color: var(--cor-fundo-claro);
-  padding: 20px 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: var(--cor-clara);
   text-align: center;
+  padding: 20px 20px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
 }
 
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  color: #555;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* ===== LOGO (Página Inicial usa mais) ===== */
 .logo img {
   width: 80px;
+  height: auto;
   border-radius: 10px;
-  transition: 0.2s ease;
+  cursor: pointer;
+  transition: transform .2s ease;
 }
 
 .logo img:hover {
   transform: scale(1.05);
 }
 
+/* ===== MENU ===== */
 nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  justify-content: center;
   gap: 25px;
-  padding: 0;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: var(--cor-destaque);
   text-decoration: none;
+  color: var(--cor-destaque);
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
   color: var(--cor-hover);
 }
 
+/* ==========================================================
+   ÁREA PRINCIPAL (usada por todas as páginas)
+   ========================================================== */
 main {
   max-width: 900px;
-  background: var(--cor-fundo-claro);
   margin: 40px auto;
-  padding: 30px;
+  background-color: var(--cor-clara);
   border-radius: 15px;
+  padding: 30px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-/* =========================================================
-   ESTILOS ESPECÍFICOS POR PÁGINA
-========================================================= */
-
-/* ========== HOME (index.html) ========== */
-#home main h2 {
-  color: var(--cor-hover);
-  font-size: 2rem;
-}
-
-#home .produtos-destaque img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-/* ========== SOBRE NÓS ========== */
-#sobre main {
-  background-color: #fffaf0;
-}
-
-#sobre h2 {
-  color: #8b5a00;
-  font-size: 2rem;
-}
-
-#sobre p {
-  text-align: justify;
-  font-size: 1.1rem;
-}
-
-/* ========== PEDIDOS ========== */
-#pedidos main {
-  border: 2px solid var(--cor-hover);
-}
-
-#pedidos h2 {
-  color: var(--cor-hover);
-  margin-bottom: 20px;
-}
-
-#pedidos form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#pedidos input,
-#pedidos textarea,
-#pedidos select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid var(--cor-destaque);
-}
-
-#pedidos button {
-  background: var(--cor-destaque);
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-#pedidos button:hover {
-  background: var(--cor-hover);
-}
-
-/* ========== CONTATO ========== */
-#contato main {
-  background-color: #fff;
-  border-left: 5px solid var(--cor-destaque);
-}
-
-#contato h2 {
-  color: var(--cor-destaque);
-}
-
-#contato .info-contato p {
-  font-size: 1.1rem;
-}
-
-#contato iframe {
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-}
-
-/* =========================================================
-   RODAPÉ (todas as páginas)
-========================================================= */
+/* ==========================================================
+   RODAPÉ (Usado em TODAS as páginas)
+   ========================================================== */
 footer {
-  background-color: var(--cor-fundo-claro);
+  background-color: var(--cor-clara);
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.12);
 }
 
 footer a {
   color: var(--cor-destaque);
+  text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* =========================================================
-   RESPONSIVIDADE
-========================================================= */
+footer address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   ===== HOME / INDEX (Página inicial)
+   ========================================================== */
+
+#index-main h2 {
+  color: var(--cor-hover);
+  text-align: center;
+}
+
+#index-main img {
+  margin: 20px 0;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+#index-main section h3 {
+  color: var(--cor-hover);
+  margin-top: 30px;
+}
+
+/* ==========================================================
+   ===== SOBRE NÓS (sobre.html)
+   ========================================================== */
+
+#sobre-main h2 {
+  color: var(--cor-destaque);
+  text-align: center;
+}
+
+#sobre-main p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+#sobre-main img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.17);
+  margin: 25px auto;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform .3s ease, box-shadow .3s ease;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* ==========================================================
+   ===== PEDIDOS (pedidos.html)
+   ========================================================== */
+
+#pedidos-main h2 {
+  text-align: center;
+  color: var(--cor-hover);
+}
+
+#pedidos-main p {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: var(--cor-destaque);
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--cor-hover);
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: var(--cor-destaque);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-hover);
+}
+
+/* ==========================================================
+   ===== RESPONSIVIDADE GERAL
+   ========================================================== */
 @media (max-width: 700px) {
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
 
   nav ul {
     gap: 15px;
   }
 
-  main {
-    margin: 20px;
-  }
-
-  .logo img {
-    width: 70px;
+  header h1 {
+    font-size: 1.8rem;
   }
 }
