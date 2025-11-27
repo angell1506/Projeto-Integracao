@@ -264,7 +264,7 @@ button:hover {
   outline-offset: 3px;
 }
 :root {
-  --vermelho: #a52820; /* contraste melhorado */
+  --vermelho: #a52820; /*melhoria no contraste*/
 }
 
 h1, h2, h3, nav a, button {
